@@ -69,6 +69,10 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     autoprefixer-rails (9.6.1)
       execjs
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.4)
@@ -77,6 +81,7 @@ GEM
     byebug (11.0.1)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
@@ -161,6 +166,12 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    react-rails (2.6.0)
+      babel-transpiler (>= 0.7.0)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redis (4.1.2)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -227,6 +238,7 @@ DEPENDENCIES
   puma
   pundit
   rails (= 6.0.0)
+  react-rails
   redis
   sassc-rails
   simple_form
