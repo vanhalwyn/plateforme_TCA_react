@@ -15,6 +15,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'react-rails'
+
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'pundit'
 

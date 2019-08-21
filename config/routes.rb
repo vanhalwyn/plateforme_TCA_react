@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'consultations', to: 'pages#consultations'
   get 'reservations', to: 'pages#reservations'
+
+  namespace :api, defaults: { format: 'json' } do
+    get 'creneaux', to: 'creneaux#index', format: 'json'
+  end
+
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
