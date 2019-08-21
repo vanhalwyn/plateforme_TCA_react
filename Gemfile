@@ -15,6 +15,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'pundit'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
