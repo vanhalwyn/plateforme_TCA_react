@@ -3,13 +3,13 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from 'redux-thunk';
 
 const initialState = {
-  timeslots: []
+  appointments: null
 };
 
 function rootReducer(state, action) {
   switch (action.type) {
     case "GET_TIMESLOTS_SUCCESS":
-      return { timeslots: action.json.timeslots };
+      return { appointments: action.json.appointments };
   }
   return state;
 }
