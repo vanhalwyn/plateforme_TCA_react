@@ -12,7 +12,7 @@ function getTimeslots() {
   console.log('getTimeslots() Action!!')
   return dispatch => {
     dispatch({ type: GET_TIMESLOTS_REQUEST });
-    return fetch(`/api/creneaux.json?date=${new Date()}`)
+    return fetch(`creneaux.json?date=${new Date()}`)
       .then(response => response.json())
       .then(json => dispatch(getTimeslotsSuccess(json)))
       .catch(error => console.log(error));
