@@ -19,6 +19,7 @@ gem 'react-rails'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'pundit'
+gem 'gon'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
