@@ -57,8 +57,9 @@ class CustomCalendar extends React.Component {
 
     if (appointments != null) {
       timeslotForm =
-        <form action="" method="get" className="form-example">
+        <form action="orders" method="post" className="form-example">
           <input hidden type="text" name="date" id="date" value={ this.state.date } required />
+          <input name="authenticity_token" type="hidden" value={ gon.form_authenticity_token } />
 
           <div>{
             allTimeslots.map((timeslot) => {

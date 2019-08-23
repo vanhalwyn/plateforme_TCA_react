@@ -19,6 +19,9 @@ gem 'react-rails'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'pundit'
+gem 'gon'
+gem 'figaro'
+gem 'stripe'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
