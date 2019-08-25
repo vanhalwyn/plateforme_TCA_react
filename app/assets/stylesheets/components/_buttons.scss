@@ -1,0 +1,37 @@
+.btn-size {
+  min-width: 49.7px;
+  min-height: 42px !important;
+  flex: 1 1;
+  padding: 10px 8px !important;
+  cursor: pointer;
+  border-radius: 1px !important;
+  transition: none !important;
+  margin-bottom: 0 !important;
+  &:hover, &:focus, &:active, &:visited {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    border-radius: 2px !important;
+  }
+  p {
+    font-size: 17px;
+    margin-bottom: 0 !important;
+    line-height: initial;
+    cursor: pointer;
+  }
+}
+
+.btn.disabled {
+  background-color: #F6F6F6 !important;
+  border-color: #F6F6F6 !important;
+  opacity: 1 !important;
+  cursor: default;
+  color: rgba(0,0,0,0.25) !important;
+  &:hover, &:focus, &:active, &:visited {
+    color: rgba(0,0,0,0.25) !important;
+  }
+  p {
+    cursor: default;
+  }
+}
+
+

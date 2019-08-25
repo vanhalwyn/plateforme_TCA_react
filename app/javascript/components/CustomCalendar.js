@@ -61,27 +61,27 @@ class CustomCalendar extends React.Component {
           <input hidden type="text" name="date" id="date" value={ this.state.date } required />
           <input name="authenticity_token" type="hidden" value={ gon.form_authenticity_token } />
 
-          <div>{
-            allTimeslots.map((timeslot) => {
-              console.log("a")
-              if (appointments.includes(timeslot)) {
-                return (
-                  <div key={timeslot}>
-                    <input disabled type="radio" id={timeslot} name="timeslot" value={timeslot} />
-                    <label for={timeslot}>{timeslot}</label>
-                  </div>
-                )
-              } else {
-                return (
-                  <div key={timeslot}>
-                    <input type="radio" id={timeslot} name="timeslot" value={timeslot} />
-                    <label for={timeslot}>{timeslot}</label>
-                  </div>
-                )
-              }
-            })
-
-           }</div>
+          <div>
+            <ul class="list-inline flexbox list-radio-items">{
+              allTimeslots.map((timeslot) => {
+                if (appointments.includes(timeslot)) {
+                  return (
+                    <li key={timeslot}>
+                      <input disabled type="radio" class="radio_item" id={timeslot} value={timeslot} name="timeslot" />
+                      <label class="btn btn-size disabled" for={timeslot}><p>{timeslot}</p></label>
+                    </li>
+                  )
+                } else {
+                  return (
+                    <li key={timeslot}>
+                      <input type="radio" class="radio_item" id={timeslot} value={timeslot} name="timeslot" />
+                      <label class="btn btn-size" for={timeslot}><p>{timeslot}</p></label>
+                    </li>
+                  )
+                }
+              })
+            }</ul>
+          </div>
 
           <div className="form-example">
             <input type="submit" value="Valider" />

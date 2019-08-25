@@ -1,0 +1,18 @@
+.radio_item {
+  display: none !important;
+}
+
+.radio_item:checked + label {
+  border-radius: 1px;
+  background-color: #006EDC;
+  border-color: #006EDC;
+  color: white;
+  height: 35px !important;
+  margin-bottom: 9px;
+}
+
+.list-radio-items {
+  margin-left: 1px;
+  margin-top: 42px;
+  width: fit-content;
+}
